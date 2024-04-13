@@ -61,5 +61,21 @@ namespace TesteNewTalents
             Assert.Throws<DivideByZeroException>(() => calc.dividir(3, 0));
 
         }
+
+        [Fact]
+        public void TestHistorico()
+        {
+            Calculadora calc = new Calculadora();
+
+            calc.somar(1, 2);
+            calc.somar(2, 8);
+            calc.somar(3, 7);
+
+            var list = calc.historico();
+
+            Assert.NotEmpty(calc.historico());
+            Assert.Equal(3, list.Count);
+
+        }
     }
 }
