@@ -3,6 +3,8 @@ using Xunit;
 
 namespace TesteNewTalents
 {
+    //TODO: Testar no VSCode...
+    
     public class UnitTest1
     {
         public Calculadora construirClasse()
