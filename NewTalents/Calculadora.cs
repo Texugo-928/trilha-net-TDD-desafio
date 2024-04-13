@@ -7,17 +7,19 @@ namespace NewTalents
     public class Calculadora
     {
         private List<string> listaHistorico;
+        private string data;
 
-        public Calculadora() 
+        public Calculadora(string data) 
         {
             listaHistorico = new List<string>();
+            this.data = data;
         }
 
         public int somar(int val1, int val2)
         {
             var result = val1 + val2;
 
-            listaHistorico.Insert(0, "Res:" + result);
+            listaHistorico.Insert(0, "Res:" + result + " - data: " + data);
 
             return result;
         }
@@ -26,6 +28,8 @@ namespace NewTalents
         {
             var result = val1 - val2;
 
+            listaHistorico.Insert(0, "Res:" + result + " - data: " + data);
+
             return result;
         }
 
@@ -33,7 +37,7 @@ namespace NewTalents
         {
             var result = val1 * val2;
 
-            listaHistorico.Insert(0, "Res:" + result);
+            listaHistorico.Insert(0, "Res:" + result + " - data: " + data);
 
             return val1 * val2;
         }
@@ -42,7 +46,7 @@ namespace NewTalents
         {
             var result = val1 / val2;
 
-            listaHistorico.Insert(0, "Res:" + result);
+            listaHistorico.Insert(0, "Res:" + result + " - data: " + data);
 
             return val1 / val2;
         }
